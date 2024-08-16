@@ -1,0 +1,85 @@
+.destaque {
+  flex: 2;
+  -webkit-box-shadow: clamp(2px, 0.5vw, 10px) clamp(4px, 1vw, 20px) clamp(10px, 2vw, 30px) clamp(1px, 0.3vw, 5px) rgba(0, 0, 0, 0.47);
+  box-shadow: clamp(2px, 0.5vw, 10px) clamp(4px, 1vw, 20px) clamp(10px, 2vw, 30px) clamp(1px, 0.3vw, 5px) rgba(201, 201, 201, 0.47);
+  padding: clamp(10px, 2vw, 20px);
+
+  .topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+
+    .titulo {
+      font-size: clamp(1em, 1.5em, 3em);
+      font-weight: 500;
+    }
+  }
+
+  .baixo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 2vw, 30px);
+
+    .graficoDestaque {
+      width: clamp(80px, 10vw, 100px);
+      height: clamp(80px, 10vw, 100px);
+    }
+    .subtitulo{
+      font-size: 1.1em;
+      text-align: center;
+      padding-bottom: 1em;
+    }
+    .titulo {
+      padding-top: 1em;
+      font-weight: 500;
+      color: gray;
+    }
+    .hoje{
+      margin-top: 3em;
+    }
+    .quantia {
+      font-size: clamp(20px, 4vw, 30px);
+    }
+
+    .descricao {
+      font-weight: 350;
+      font-size: 1em;
+      color: gray;
+      text-align: center;
+    }
+
+    .resumo {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .item {
+        text-align: center;
+
+        .tituloItem {
+          font-size: clamp(0.5em, 0.9em, 1.5em);
+          color: gray;
+        }
+
+        .resultadoItem {
+          display: flex;
+          align-items: center;
+          margin-top: clamp(8px, 1.5vw, 10px);
+          font-size: clamp(12px, 1.5vw, 14px);
+
+          &.positivo {
+            color: green;
+          }
+
+          &.negativo {
+            color: red;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import '../coresUsadas/cores.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
+.barraLateral {
+  flex: 1;
+  background-color: $corDeFundoNavLateral;
+  .topo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .imgLogo{
+        width: 5vw;
+        padding-top: 0.4vw;
+      }
+      p{
+        color: $corDasFontesNavLateral;
+        font-weight: 700;
+      }
+    }
+    
+  }
+
+
+  .centro {
+    padding-left: 0.625rem;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      .titulo {
+        font-size: 1em;
+        font-weight: bold;
+        color: $corDasFontesNavLateral;
+        margin-top: 1rem;
+        margin-bottom: 0.3125rem;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        padding: 0.3125rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #292929;
+        }
+
+        .icone {
+          font-size: 1.3em;
+          color: $coresDoIconesBarraLateral;
+        }
+
+        span {
+          font-size: 0.9em;
+          font-weight: 700;
+          color: $corDasFontesNavLateral;
+          margin-left: 0.625rem;
+        }
+      }
+    }
+  }
+}

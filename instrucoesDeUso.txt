@@ -1,0 +1,13 @@
+Dependecias/Bibliotecas, usadas durante o projeto
+recharts, biblioteca usada para construir gráficos
+react-router-dom, otimiza o carregar das paginas
+@Mui, icones usados pelo site
+sass, maneira que usada para estilizar mais precisamente, sem muita div, class e id, usei muito das variaveis e do nesting
+web-vitals, mede a perfomance do site como a velocidade de carregamento (vi um video na net sobre como usar, talvez irei adicionar ao tcc) 
+react-scripts, biblioteca que vem com pré configuração
+react-circular-progressbar, estilomdo carregamento do site
+@testing, biblioteca que usei para testar o site
+@emotion,É uma biblioteca que nos ajuda a escrever estilos CSS diretamente dentro do código JavaScript, tornando a estilização mais flexível
+
+Comando para baixar elas:
+npm install recharts react-router-dom @mui/material @emotion/react @emotion/styled sass web-vitals react-scripts react-circular-progressbar @testing-library/react

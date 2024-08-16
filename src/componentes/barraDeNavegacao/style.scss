@@ -1,0 +1,61 @@
+@import '../coresUsadas/cores.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
+.barraDeNavegacao {
+  display: flex;
+  align-items: center;
+  font-size: 10rem;
+  color: $corDaLupaDaBarraDePesquisa;
+  background-color: $corDeFundoNavLateral;
+
+  .wrapper {
+    width: 100%;
+    padding: 1vh 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .pesquisa {
+      display: flex;
+      justify-content: space-between;
+     
+      display: flex;
+      align-items: center;
+      border: 0.3vh solid $corDaLupaDaBarraDePesquisa;
+      padding: 0.8rem;
+      border-radius: 10px;
+      input {
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 65vw;
+        &::placeholder {
+          font-size: 1.2em;
+        }
+      }
+    }
+
+    .itens {
+      display: flex;
+      align-items: center;
+
+      .item {
+        display: flex;
+        padding-left: 1vw;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .avatar {
+          width: 3rem;
+        }
+        p{
+          font-size: 1rem;
+          font-weight: bold;
+          color: $corDasFontesNavLateral;
+        }
+      }
+    }
+  }
+}

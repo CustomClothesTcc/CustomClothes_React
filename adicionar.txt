@@ -1,0 +1,4 @@
+melhorar as paginas quando ampliam a pagina, irei entregar numa boa adaptação entre 80% e 125%
+
+barraLateral:
+    Na parte usuarios tem as opções Perfil, será para limitar a ações entre funcionários e dono. E sair para telas perfils.

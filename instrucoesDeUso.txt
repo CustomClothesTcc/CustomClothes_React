@@ -11,3 +11,5 @@ react-circular-progressbar, estilomdo carregamento do site
 
 Comando para baixar elas:
 npm install recharts react-router-dom @mui/material @emotion/react @emotion/styled sass web-vitals react-scripts react-circular-progressbar @testing-library/react
+
+Caso na hora de executar nao funcione é necessario a reinstalação do vite com o seguinte comando npm install vite --save-dev

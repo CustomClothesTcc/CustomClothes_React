@@ -1,4 +1,4 @@
-import "./style.scss"; 
+import "./style.scss";
 import BarraLateral from "../../componentes/barraLateral/BarraLateral";
 import BarraDeNavegacao from "../../componentes/barraDeNavegacao/BarraDeNavegacao";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
@@ -15,29 +15,27 @@ const NovoUsuario = ({ entradas, titulo }) => {
         <div className="topo">
           <h1>{titulo}</h1>
         </div>
+        <div className="inputFormulario">
+          <img
+            src={
+              arquivo
+                ? URL.createObjectURL(arquivo)
+                : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+            }
+            alt="Imagem do Cliente"
+            className="imagemCliente"
+          />
+          <label htmlFor="arquivo" className="uploadLabel">
+            Imagem: <DriveFolderUploadOutlinedIcon className="icone" />
+          </label>
+          <input
+            type="file"
+            id="arquivo"
+            onChange={(e) => setArquivo(e.target.files[0])}
+            style={{ display: "none" }}
+          />
+        </div>
         <div className="baixo">
-          <div className="esquerda">
-            <img
-              src={
-                arquivo
-                  ? URL.createObjectURL(arquivo)
-                  : "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
-              }
-              alt="Imagem do Cliente"
-              className="imagemCliente"
-            />
-            <div className="inputFormulario">
-              <label htmlFor="arquivo" className="uploadLabel">
-                Imagem: <DriveFolderUploadOutlinedIcon className="icone" />
-              </label>
-              <input
-                type="file"
-                id="arquivo"
-                onChange={(e) => setArquivo(e.target.files[0])}
-                style={{ display: "none" }}
-              />
-            </div>
-          </div>
           <div className="direita">
             <form>
               {entradas.map((entrada) => (
@@ -59,9 +57,11 @@ const NovoUsuario = ({ entradas, titulo }) => {
                   )}
                 </div>
               ))}
-              <button type="submit">Enviar</button>
             </form>
           </div>
+        </div>
+        <div className="divButton">
+          <button type="submit">Enviar</button>
         </div>
       </div>
     </div>

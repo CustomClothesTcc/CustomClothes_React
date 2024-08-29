@@ -22,7 +22,7 @@ const Unico = () => {
                 className="imagemItem"
               />
               <div className="detalhes">
-                <h1 className="tituloItem">THOMAS URBANDO</h1>
+                <h1 className="tituloItem">JOANA MACHADO SILVA</h1>
                 <div className="itemDetalhe">
                   <span className="chaveItem">Email:</span>
                   <span className="valorItem">customclothes@gmail.com</span>

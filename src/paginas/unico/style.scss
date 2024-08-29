@@ -34,8 +34,8 @@
           gap: clamp(1rem, 2vw, 2rem);
 
           .imagemItem {
-            width: clamp(5rem, 10vw, 10rem);
-            height: clamp(5rem, 10vw, 10rem);
+            width: clamp(5vw, 19vw, 25vw);
+            height: clamp(5vw, 19vw, 25vw);
             border-radius: 50%;
             object-fit: cover;
           }
@@ -43,6 +43,7 @@
           .detalhes {
             .tituloItem {
               margin-bottom: clamp(0.5rem, 1vw, 1rem);
+              font-size: 4em;
               color: #555;
             }
 

@@ -1,87 +1,97 @@
-.novoProduto {
-    display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cadastrarProduto {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.containerCadastrarProduto {
+  flex: 6;
+  padding: 4vw;
+
+  .topo {
+    h1 {
+      margin-bottom: 3vh;
+      font-size: clamp(3vw, 4vh, 4vw);
+    }
   }
-  
-  .containerNovoProduto {
-    flex: 6;
-    padding: 20px;
-  
-    .topo {
-      h1 {
-        margin-bottom: 20px;
-      }
+
+  .inputFormulario.imagemCentralizada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+
+    .imagemProduto {
+      width: clamp(16vw, 18vh, 20vw);
+      height: clamp(16vw, 18vh, 20vw);
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 3vh;
     }
-  
-    .inputFormulario.imagemCentralizada {
+
+    .uploadLabel {
+      cursor: pointer;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      margin-bottom: 30px;
-  
-      .imagemProduto {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 20px;
-      }
-  
-      .uploadLabel {
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        color: gray;
-  
-        .icone {
-          margin-left: 5px;
-        }
+      color: gray;
+
+      .icone {
+        margin-left: 1vw;
       }
     }
-  
-    .baixo {
-      display: flex;
-      justify-content: space-between;
-  
-      .direita {
-        flex: 6;
-  
-        form {
+  }
+
+  .baixo {
+    display: flex;
+    justify-content: space-between;
+
+    .direita {
+      flex: 6;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .inputFormulario {
           display: flex;
           flex-direction: column;
-  
-          .inputFormulario {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-  
-            label {
-              margin-bottom: 5px;
-              font-weight: bold;
-            }
-  
-            input,
-            select {
-              padding: 10px;
-              border: 1px solid gray;
-              border-radius: 5px;
-            }
+          margin-bottom: 2vh;
+
+          label {
+            margin-bottom: 1vh;
+            font-size: 1.5vw;
+          }
+
+          input,
+          select {
+            padding: 2vh;
+            border: 1px solid gray;
+            border-radius: 1vh;
+            font-size: 1.5vw;
           }
         }
       }
     }
-  
-    .divButton {
-      display: flex;
-      justify-content: flex-end;
-  
-      button {
-        padding: 10px 20px;
-        background-color: teal;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
+  }
+
+  .divButton {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      padding: 2vh 4vw;
+      background-color: teal;
+      color: white;
+      border: none;
+      border-radius: 1vh;
+      cursor: pointer;
+      font-size: 1.5vw;
     }
   }
-  
+}

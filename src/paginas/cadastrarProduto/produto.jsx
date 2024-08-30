@@ -1,4 +1,4 @@
-import "./produto.scss";
+import "./style.scss";
 import BarraLateral from "../../componentes/barraLateral/BarraLateral";
 import BarraDeNavegacao from "../../componentes/barraDeNavegacao/BarraDeNavegacao";
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";

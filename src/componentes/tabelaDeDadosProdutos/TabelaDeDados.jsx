@@ -37,7 +37,7 @@ const TabelaDeDados = () => {
     <div className="tabelaDeDados">
       <div className="tituloTabelaDeDados">
         Adicionar Novo Produto
-        <Link to="/usuarios/novo" className="link">
+        <Link to="/produtos/novoProduto" className="link">
           Adicionar Novo
         </Link>
       </div>

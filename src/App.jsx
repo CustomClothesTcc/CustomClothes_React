@@ -33,7 +33,7 @@ function App() {
               <Route index element={<ListaProdutos />} />
               <Route path=":produtoId" element={<Unico />} />
               <Route
-                path="novo"
+                path="novoProduto"
                 element={
                   <NovoUsuario
                     entradas={entradasProduto}

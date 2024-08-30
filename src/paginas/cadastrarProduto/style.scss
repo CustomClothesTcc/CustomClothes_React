@@ -1,0 +1,87 @@
+.novoProduto {
+    display: flex;
+  }
+  
+  .containerNovoProduto {
+    flex: 6;
+    padding: 20px;
+  
+    .topo {
+      h1 {
+        margin-bottom: 20px;
+      }
+    }
+  
+    .inputFormulario.imagemCentralizada {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+  
+      .imagemProduto {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+  
+      .uploadLabel {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: gray;
+  
+        .icone {
+          margin-left: 5px;
+        }
+      }
+    }
+  
+    .baixo {
+      display: flex;
+      justify-content: space-between;
+  
+      .direita {
+        flex: 6;
+  
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          .inputFormulario {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+  
+            label {
+              margin-bottom: 5px;
+              font-weight: bold;
+            }
+  
+            input,
+            select {
+              padding: 10px;
+              border: 1px solid gray;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  
+    .divButton {
+      display: flex;
+      justify-content: flex-end;
+  
+      button {
+        padding: 10px 20px;
+        background-color: teal;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  

@@ -4,7 +4,6 @@ import Login from "./paginas/login/Login";
 import ListaProdutos from "./paginas/listaProdutos/Lista";
 import ListaUsuarios from "./paginas/listaUsuarios/Lista";
 import Unico from "./paginas/unico/Unico";
-import Novo from "./paginas/novo/Novo";
 import NovoUsuario from "./paginas/novoUsuario/NovoUsuario";
 import { entradasProduto, entradasUsuario } from "./formulario";
 

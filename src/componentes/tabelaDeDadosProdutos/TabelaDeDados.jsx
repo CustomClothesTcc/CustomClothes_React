@@ -36,10 +36,7 @@ const TabelaDeDados = () => {
   return (
     <div className="tabelaDeDados">
       <div className="tituloTabelaDeDados">
-        Adicionar Novo Produto
-        <Link to="/produtos/novoProduto" className="link">
-          Adicionar Novo
-        </Link>
+        Registros dos Pedidos dos Clientes
       </div>
       <DataGrid
         className="tabelaDados"

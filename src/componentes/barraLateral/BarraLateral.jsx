@@ -49,14 +49,14 @@ const BarraLateral = () => {
           </Link>
           <Link to="/produtos" style={{ textDecoration: "none" }}>
             <li>
-              <StoreIcon className="icone" />
-              <span>Produtos</span>
-            </li>
-          </Link>
-          <Link to="/pedidos" style={{textDecoration: "none"}}>
-            <li>
               <CreditCardIcon className="icone" />
               <span>Pedidos</span>
+            </li>
+          </Link>
+          <Link to="/produtos/novoProduto" className="link">
+            <li>
+              <StoreIcon className="icone" />
+              <span>Produtos</span>
             </li>
           </Link>
           <li>

@@ -1,7 +1,9 @@
-@import '../padronizacao/cores.scss';
+@import '../padronizacao/organizacao.scss';
+
 *{
   margin: 0;
   padding: 0;
+  font-family: $fonteUsadaEmTodoSite;
 }
 .novo {
   display: flex;

@@ -1,7 +1,10 @@
-@import '../coresUsadas/cores.scss';
+@import '../padronizacao/organizacao.scss';
+@import '../padronizacao/cores.scss';
+
 *{
   margin: 0;
   padding: 0;
+  font-family: $fonteUsadaEmTodoSite;
 }
 .novoUsuario {
   display: flex;

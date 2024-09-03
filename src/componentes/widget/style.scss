@@ -1,4 +1,9 @@
-// src/componentes/widget/style.scss
+@import '../padronizacao/organizacao.scss';
+*{
+  margin: 0;
+  padding: 0;
+  font-family: $fonteUsadaEmTodoSite;
+}
 .widget {
   display: flex;
   justify-content: space-between;

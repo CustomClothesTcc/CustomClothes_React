@@ -59,10 +59,13 @@ const BarraLateral = () => {
               <span>Produtos</span>
             </li>
           </Link>
+          <Link to="/entrega">
           <li>
             <LocalShippingIcon className="icone" />
             <span>Entrega</span>
           </li>
+          </Link>
+          
           <p className="titulo">ÚTIL</p>
           <li>
             <InsertChartIcon className="icone" />

@@ -1,79 +1,88 @@
-
+@import '../padronizacao/cores.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
 .novo {
-    width: 100%;
-    display: flex;
-  
-    .containerNovo {
-      flex: 6;
-  
-      .topo,
-      .baixo {
-        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
-        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-        padding: 10px;
-        margin: 20px;
+  display: flex;
+
+  .containerNovo {
+    flex-grow: 1;
+
+    .topo h1 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: clamp(1rem, 2vw, 2rem);
+    }
+
+    .listaEntregas {
+      margin-top: clamp(1rem, 2vw, 2rem);
+    }
+
+    .divBarraEntrega {
+      margin-bottom: clamp(0.5rem, 1vw, 1rem);
+      border: 1px solid #ddd;
+      padding: clamp(0.5rem, 1vw, 1rem);
+      border-radius: 0.5rem;
+
+      .barraEntrega {
         display: flex;
-  
-        h1 {
-          color: lightgray;
-          font-size: 20px;
-        }
-  
-        .esquerda {
-          flex: 1;
-          text-align: center;
-  
-          img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .infoEntrega {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .dataCompra {
+            margin-left: auto;
           }
         }
-  
-        .direita {
-          flex: 2;
-  
-          form {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: space-around;
-  
-            .inputFormulario {
-              width: 40%;
-  
-              label {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-  
-                .icone {
-                  cursor: pointer;
-                }
-              }
-  
-              input {
-                width: 100%;
-                padding: 5px;
-                border: none;
-                border-bottom: 1px solid gray;
+
+        
+      }
+
+      .linhaStatus {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-top: clamp(1rem, 2vh, 2rem);
+        padding: clamp(0.5rem, 1vw, 1rem) 0;
+        border-top: 1px solid #ddd;
+
+        .pontos {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          position: relative;
+
+          .pontoWrapper {
+            text-align: center;
+
+            .ponto {
+              width: clamp(0.5rem, 1vw, 0.75rem);
+              height: clamp(0.5rem, 1vw, 0.75rem);
+              background-color: #ccc;
+              border-radius: 50%;
+              margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+
+              &.ativo {
+                background-color: #007bff;
               }
             }
-  
-            button {
-              width: 150px;
-              padding: 10px;
-              border: none;
-              background-color: teal;
-              color: white;
-              font-weight: bold;
-              cursor: pointer;
-              margin-top: 10px;
-            }
+
+          
           }
+        }
+
+        .carrinho {
+          position: absolute;
+          top: -2.5rem;
+          left: 0;
+          transform: translateX(calc(var(--posicao-carrinho) * 100%));
+          transition: transform 0.3s ease;
         }
       }
     }
   }
-  
+}

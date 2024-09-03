@@ -1,4 +1,8 @@
-
+@import '../padronizacao/cores.scss';
+*{
+  margin: 0;
+  padding: 0;
+}
 .grafico {
   flex: 4;
   -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);

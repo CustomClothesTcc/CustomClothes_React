@@ -1,0 +1,47 @@
+@import 'cores.scss';
+
+@mixin reset {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@mixin espacoInterno($padding) {
+  padding: $padding;
+}
+
+@mixin dimensoes($largura, $altura: $largura) {
+  width: $largura;
+  height: $altura;
+}
+
+@mixin bordaConfig($largura, $estilo: solid, $cor) {
+  border: $largura $estilo $cor;
+}
+
+@mixin fonteConfig($tamanho, $peso: normal) {
+  font-size: $tamanho;
+  font-weight: $peso;
+}
+
+@mixin sombra($x, $y, $blur, $spread, $cor) {
+  -webkit-box-shadow: $x $y $blur $spread $cor;
+  box-shadow: $x $y $blur $spread $cor;
+}
+
+@mixin centralizarFlex($direcao: row, $espaco: space-between) {
+  display: flex;
+  flex-direction: $direcao;
+  justify-content: $espaco;
+  align-items: center;
+}
+
+@mixin centralizarEspacamentoFlex($direcao: row, $espaco: space-between) {
+  @include centralizarFlex($direcao, $espaco);
+  align-items: center;
+}
+
+@mixin gap($valor) {
+  gap: $valor;
+}

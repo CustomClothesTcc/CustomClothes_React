@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from "./paginas/inicio/Inicio";
 import Login from "./paginas/login/Login";
+import Entrega from "./paginas/statusEntrega/Entrega"
 import ListaProdutos from "./paginas/listaProdutos/Lista";
 import ListaUsuarios from "./paginas/listaUsuarios/Lista";
 import Unico from "./paginas/unico/Unico";
@@ -41,6 +42,10 @@ function App() {
                 }
               />
             </Route>
+            
+              
+              <Route path="entrega" element={<Entrega />} />
+            
           </Route>
         </Routes>
       </BrowserRouter>

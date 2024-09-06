@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: gray;
+    color: $corTextoTitulos;
 
     .titulo {
       font-size: clamp(1em, 1.5em, 3em);
@@ -42,7 +42,7 @@
     .titulo {
       padding-top: 1em;
       font-weight: 500;
-      color: gray;
+      color: $corTextoTitulos;
     }
     .hoje{
       margin-top: 3em;
@@ -54,12 +54,11 @@
     .descricao {
       font-weight: 350;
       font-size: 1em;
-      color: gray;
+      color: $corTextoTitulos;
       text-align: center;
     }
 
     .resumo {
-      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -69,7 +68,7 @@
 
         .tituloItem {
           font-size: clamp(0.5em, 0.9em, 1.5em);
-          color: gray;
+          color: $corTextoTitulos;
         }
 
         .resultadoItem {
@@ -79,11 +78,11 @@
           font-size: clamp(12px, 1.5vw, 14px);
 
           &.positivo {
-            color: green;
+            color: $corPositiva;
           }
 
           &.negativo {
-            color: red;
+            color: $corNegativa;
           }
         }
       }

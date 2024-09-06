@@ -1,4 +1,5 @@
 @import '../padronizacao/organizacao.scss';
+@import '../padronizacao/cores.scss';
 *{
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@
     .titulo {
       font-weight: bold;
       font-size: 14px;
-      color: rgb(160, 160, 160);
+      color: $corTextoTitulos;
     }
 
     .contador {
@@ -43,10 +44,10 @@
       font-size: 14px;
 
       &.positivo {
-        color: green;
+        color: $corPositiva;
       }
       &.negativo {
-        color: red;
+        color: $corNegativa;
       }
     }
 

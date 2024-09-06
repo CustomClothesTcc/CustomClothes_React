@@ -33,7 +33,7 @@ const Lista = () => {
       data: "1 Março",
       quantia: 1,
       metodo: "Pagamento Online",
-      status: "Pendente",
+      status: "Recusado",
     },
     {
       id: 2342353,
@@ -61,7 +61,7 @@ const Lista = () => {
       img: Short,
       cliente: "Harold Carol",
       data: "1 Março",
-      quantia: 2000,
+      quantia: 9,
       metodo: "Online",
       status: "Pendente",
     },

@@ -1,17 +1,15 @@
 @import '../padronizacao/organizacao.scss';
+@import '../padronizacao/cores.scss';
+
 *{
   margin: 0;
   padding: 0;
   font-family: $fonteUsadaEmTodoSite;
 }
 .tabelaDeDados {
-  height: 100%;
-  width: 100%;
-
   .tituloTabelaDeDados {
-    width: 100%;
     font-size: clamp(1.5rem, 2.4vh, 3rem);
-    color: gray;
+    color: $corTextoTitulos;
     margin-bottom: clamp(0.5rem, 1vh, 1.5rem);
     display: flex;
     align-items: center;
@@ -19,7 +17,7 @@
 
     .link {
       text-decoration: none;
-      color: green;
+      color: $corPositiva;
       font-size: clamp(1rem, 1.6vh, 2rem);
       font-weight: 400;
       border: clamp(0.05rem, 0.1vh, 0.2rem) solid green;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./style.scss";
 import BarraLateral from "../../componentes/barraLateral/BarraLateral";
 import BarraDeNavegacao from "../../componentes/barraDeNavegacao/BarraDeNavegacao";
@@ -66,6 +67,20 @@ const CadastrarUsuario = ({ entradas, titulo }) => {
       </div>
     </div>
   );
+};
+
+// Adicionando validação de props
+CadastrarUsuario.propTypes = {
+  entradas: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      tipo: PropTypes.string.isRequired,
+      placeholder: PropTypes.string,
+      options: PropTypes.arrayOf(PropTypes.string),
+    })
+  ).isRequired,
+  titulo: PropTypes.string.isRequired,
 };
 
 export default CadastrarUsuario;

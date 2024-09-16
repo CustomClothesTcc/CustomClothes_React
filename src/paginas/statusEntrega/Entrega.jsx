@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./style.scss";
 import BarraLateral from "../../componentes/barraLateral/BarraLateral";
 import BarraDeNavegacao from "../../componentes/barraDeNavegacao/BarraDeNavegacao";
@@ -68,6 +69,12 @@ const BarraEntrega = ({ id, dataCompra, status }) => {
       )}
     </div>
   );
+};
+
+BarraEntrega.propTypes = {
+  id: PropTypes.number.isRequired,
+  dataCompra: PropTypes.string.isRequired,
+  status: PropTypes.oneOf(["pendente", "aprovado", "a caminho", "entregue"]).isRequired,
 };
 
 const Entrega = () => {

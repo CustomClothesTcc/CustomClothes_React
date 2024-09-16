@@ -23,6 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
+adicionarNaApresentacao.txt
 fonteDeDados.jsx
 formulario.jsx
 node_modules/

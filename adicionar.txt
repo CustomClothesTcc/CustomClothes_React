@@ -2,3 +2,7 @@ melhorar as paginas quando ampliam a pagina, irei entregar numa boa adaptação 
 
 barraLateral:
     Na parte usuarios tem as opções Perfil, será para limitar a ações entre funcionários e dono. E sair para telas perfils.
+
+RESOLVER OS ERROS ATUAIS NA PARTE DE BARRA DE NAVEGAÇÃO E BARRA LATERAL
+CONCERTE A PROPORÇÃO DE 75% a 100%
+PADRONIZAR O DASHBOARD

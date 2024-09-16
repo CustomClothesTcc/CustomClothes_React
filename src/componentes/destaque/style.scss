@@ -18,6 +18,7 @@
     color: $corTextoTitulos;
 
     .titulo {
+      overflow: hidden;
       font-size: clamp(1em, 1.5em, 3em);
       font-weight: 500;
     }
@@ -31,8 +32,8 @@
     gap: clamp(15px, 2vw, 30px);
 
     .graficoDestaque {
-      width: clamp(80px, 10vw, 100px);
-      height: clamp(80px, 10vw, 100px);
+      overflow: hidden;
+      width: 9vw;
     }
     .subtitulo{
       font-size: 1.1em;

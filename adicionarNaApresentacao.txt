@@ -1,0 +1,2 @@
+VALIDAÇÃO DE PROPS:
+um erro comum que ocorria comigo por estar lidando com banco de dados era validação do props, demorou para conseguir resolver e um dos sintomas que este erro causa é não conseguir manipular banco de dados e edições não serem visiveis, na tela está dois codigos que ajudará a resolver este problema

@@ -6,6 +6,7 @@ import ListaProdutos from "./paginas/listaProdutos/Lista";
 import ListaUsuarios from "./paginas/listaUsuarios/Lista";
 import Unico from "./paginas/unico/Unico";
 import NovoUsuario from "./paginas/cadastrarUsuario/usuario";
+import NovoProduto from "./paginas/cadastrarProduto/produto";
 import { entradasProduto, entradasUsuario } from "./formulario";
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
               <Route
                 path="novoProduto"
                 element={
-                  <NovoUsuario
+                  <NovoProduto
                     entradas={entradasProduto}
                     titulo="Adicionar Novo Produto"
                   />

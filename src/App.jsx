@@ -5,7 +5,7 @@ import Entrega from "./paginas/statusEntrega/Entrega"
 import ListaProdutos from "./paginas/listaProdutos/Lista";
 import ListaUsuarios from "./paginas/listaUsuarios/Lista";
 import Unico from "./paginas/unico/Unico";
-import NovoUsuario from "./paginas/novoUsuario/NovoUsuario";
+import NovoUsuario from "./paginas/cadastrarUsuario/usuario";
 import { entradasProduto, entradasUsuario } from "./formulario";
 
 function App() {

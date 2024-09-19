@@ -6,7 +6,7 @@ import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUpload
 import { useState } from "react";
 
 const CadastrarProduto = ({ entradas, titulo }) => {
-  const [arquivo, setArquivo] = useState("");
+  let [arquivo, setArquivo] = useState("");
 
   return (
     <div className="pagina">

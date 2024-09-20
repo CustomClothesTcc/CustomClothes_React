@@ -9,8 +9,6 @@
   scroll-behavior: $padrãoRolamentoDoSite;
 }
 
-
-
 .topo {
   margin-bottom: 2em;
   display: flex;
@@ -75,10 +73,6 @@
   gap: 2vw;
   margin-bottom: 2em;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-
   .direita {
     flex: 2;
     background-color: #fff;
@@ -96,9 +90,7 @@
         width: 100%;
         margin-bottom: 1em;
 
-        @media (min-width: 768px) {
-          width: calc(50% - 1vw);
-        }
+        
 
         label {
           display: block;
@@ -127,26 +119,21 @@
     }
   }
 }
-
-.divButton {
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
-
-  button {
-    width: 75%;
-    padding: 1em;
-    margin: 1em;
-    background-color: $coresDoIconesBarraLateral;
-    color: #f1f1f1;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-
-  button:hover {
-    background-color: darken($coresDoIconesBarraLateral, 10%);
+div.divContainerButton{
+  .divButton {
+    display: flex;
+    justify-content: center;
+  
+    button.btnEnviar{
+      background-color: $coresDoIconesBarraLateral;
+      width: 75%;
+      margin-bottom: 1em;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
   }
 }
+

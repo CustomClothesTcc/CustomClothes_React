@@ -1,110 +1,137 @@
-@import '../padronizacao/organizacao.scss';
+@import "../padronizacao/organizacao.scss";
+@import "../padronizacao/cores.scss";
 
 * {
   margin: 0;
   padding: 0;
-  scroll-behavior: $padrãoRolamentoDoSite;
+  box-sizing: border-box;
   font-family: $fonteUsadaEmTodoSite;
+  scroll-behavior: $padrãoRolamentoDoSite;
 }
-
-.pagina {
-  display: flex;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.conteudo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.paginaProduto {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 2vw;
-}
-
-.containerCadastrarProduto {
-  flex: 1;
-}
-
-.topo h1 {
-  margin-bottom: 3vh;
-  font-size: clamp(3vw, 4vh, 4vw);
-}
-
-.inputFormulario.imagemCentralizada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 5vh;
-
-  .imagemProduto {
-    width: clamp(16vw, 18vh, 20vw);
-    height: clamp(16vw, 18vh, 20vw);
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 3vh;
-  }
-
-  .uploadLabel {
-    cursor: pointer;
+div.lista {
+  div.topo {
+    margin-bottom: 2em;
     display: flex;
     align-items: center;
-    color: gray;
+    justify-content: center;
 
-    .icone {
-      margin-left: 1vw;
+    h1 {
+      overflow-y: hidden;
+      color: #333;
+      font-size: clamp(1.5em, 2vw, 2.5em);
+      font-weight: bold;
+      text-align: center;
+      margin: 1em;
     }
   }
-}
 
-.baixo {
-  display: flex;
-  justify-content: space-between;
+  div.inputFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
 
-  .direita {
-    flex: 6;
+    img.imagemProduto {
+      width: clamp(10em, 15vw, 20em);
+      height: clamp(10em, 15vw, 20em);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 0.2em solid #ccc;
+      margin: 0em 1em 3em 1em;
+      transition: transform 0.3s ease;
+    }
 
-    form {
+    img.imagemProduto:hover {
+      transform: scale(1.05);
+    }
+
+    label.uploadLabel {
       display: flex;
-      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1em;
+      cursor: pointer;
+      color: #555;
+      font-weight: bold;
+      padding: 1em 4em;
+      border: 0.1em solid #ccc;
+      border-radius: 0.5em;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-size: 1em;
+    }
 
-      .inputFormulario {
+    label.uploadLabel:hover {
+      background-color: #eee;
+      color: #333;
+    }
+  }
+
+  div.baixo {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    margin-bottom: 2em;
+
+    div.direita {
+      flex: 2;
+      background-color: #fff;
+      padding: 2em;
+      border-radius: 1vw;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+
+      form {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 2vh;
+        flex-wrap: wrap;
+        gap: 2vw;
 
-        label {
-          margin-bottom: 1vh;
-          font-size: 1.5vw;
-        }
+        div.inputFormulario {
+          width: 100%;
+          margin-bottom: 1em;
 
-        input,
-        select {
-          padding: 2vh;
-          border: 1px solid gray;
-          border-radius: 1vh;
-          font-size: 1.5vw;
+          label {
+            display: block;
+            margin-bottom: 0.5em;
+            font-weight: bold;
+            color: #555;
+          }
+
+          input,
+          select {
+            width: 100%;
+            padding: 0.8em;
+            border: 0.1em solid #ccc;
+            border-radius: 0.5em;
+            font-size: 1em;
+            color: #333;
+            transition: border-color 0.3s ease;
+          }
+
+          input:focus,
+          select:focus {
+            border-color: #666;
+            outline: none;
+          }
         }
       }
     }
   }
-}
+  div.divContainerButton {
+    .divButton {
+      display: flex;
+      justify-content: center;
 
-.divButton {
-  display: flex;
-  justify-content: flex-end;
-
-  button {
-    padding: 2vh 4vw;
-    background-color: teal;
-    color: white;
-    border: none;
-    border-radius: 1vh;
-    cursor: pointer;
-    font-size: 1.5vw;
+      button.btnEnviar {
+        color: #f3f3f3;
+        background-color: $coresDoIconesBarraLateral;
+        width: 75%;
+        margin-bottom: 1em;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+      }
+    }
   }
 }

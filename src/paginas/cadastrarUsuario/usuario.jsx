@@ -5,14 +5,14 @@ import BarraDeNavegacao from "../../componentes/barraDeNavegacao/BarraDeNavegaca
 import DriveFolderUploadOutlinedIcon from "@mui/icons-material/DriveFolderUploadOutlined";
 import { useState } from "react";
 
-const NovoUsuario = ({entradas, titulo}) => {
-    const [arquivo, setArquivo] = useState("");
-    return (
-      <div className="lista">
-        <BarraLateral />
-        <div className="containerLista">
-          <BarraDeNavegacao />
-          <div className="topo">
+const NovoUsuario = ({ entradas, titulo }) => {
+  const [arquivo, setArquivo] = useState("");
+  return (
+    <div className="lista">
+      <BarraLateral />
+      <div className="containerLista">
+        <BarraDeNavegacao />
+        <div className="topo">
           <h1>{titulo}</h1>
         </div>
         <div className="inputFormulario">
@@ -60,26 +60,29 @@ const NovoUsuario = ({entradas, titulo}) => {
             </form>
           </div>
         </div>
-        <div className="divButton">
-          <button type="submit">Enviar</button>
-        </div>
+        <div className="divContainerButton">
+          <div className="divButton">
+            <button type="submit" className="btnEnviar">
+              Enviar
+            </button>
+          </div>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-  NovoUsuario.propTypes = {
-    entradas: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        label: PropTypes.string.isRequired,
-        tipo: PropTypes.string.isRequired,
-        placeholder: PropTypes.string,
-        options: PropTypes.arrayOf(PropTypes.string),
-      })
-    ).isRequired,
-    titulo: PropTypes.string.isRequired,
-  };
-  
-  export default NovoUsuario;
-  
+NovoUsuario.propTypes = {
+  entradas: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      tipo: PropTypes.string.isRequired,
+      placeholder: PropTypes.string,
+      options: PropTypes.arrayOf(PropTypes.string),
+    })
+  ).isRequired,
+  titulo: PropTypes.string.isRequired,
+};
+
+export default NovoUsuario;

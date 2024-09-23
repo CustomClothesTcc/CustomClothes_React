@@ -8,11 +8,11 @@
   scroll-behavior: $padrãoRolamentoDoSite;
   overflow-x: hidden;
 }
-
 .barraLateral {
   top: 0;
   left: 0;
-  width: 35vw;
+  min-width: 15vw;
+  max-width: 30vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -20,22 +20,21 @@
   background-color: $corDeFundoNavLateral;
 
   .topo {
-    padding: auto;
     .item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0.2em;
       .imgLogo {
-        min-width: 3em;
-        max-width: 5em;
+        min-width: 5vw;
+        width: auto;
+        max-width: 7vw;
         margin: 0.5em;
       }
 
       p {
         color: $corDasFontesNavLateral;
         font-weight: 700;
-        font-size: 1em;
+        font-size: 1.5vmin 4vmax;
         text-align: center;
       }
     }
@@ -49,7 +48,7 @@
       padding: 0;
 
       .titulo {
-        font-size: clamp(0.8em, 1em, 1.2em);
+        font-size: clamp(0.8em, 1em, 1.5em);
         font-weight: bold;
         color: $corDasFontesNavLateral;
         margin: 1rem;
@@ -58,7 +57,7 @@
       li {
         display: flex;
         align-items: center;
-        padding: 0.5rem 1rem;
+        padding: clamp(0.4rem, 1rem, 1.2rem);
         cursor: pointer;
         transition: background-color 0.3s ease;
 
@@ -67,7 +66,7 @@
         }
 
         .icone {
-          font-size: 1em;
+          font-size: clamp(0.7em, 1.2em, 1.5em);
           color: $coresDoIconesBarraLateral;
         }
 
@@ -80,51 +79,5 @@
       }
     }
   }
-  @media (min-width: 1200px) {
-    width: 12vw;
-  
-    .topo .item .imgLogo {
-      width: 4rem;
-    }
-  
-    .centro ul li {
-      padding: 0.4rem 0.8rem;
-  
-      .icone {
-        font-size: 1rem;
-      }
-  
-      span {
-        font-size: 0.8rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-  
-  @media (min-width: 1500px) {
-    width: 10vw;
-  
-    .topo .item .imgLogo {
-      width: 4.5rem;
-    }
-  
-    .centro ul li {
-      padding: 0.3rem 0.6rem;
-  
-      .icone {
-        font-size: 1.4rem;
-      }
-  
-      span {
-        font-size: 0.75rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }
-  }
+
 }
-
-

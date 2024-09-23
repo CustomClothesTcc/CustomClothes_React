@@ -6,67 +6,68 @@
   padding: 0;
   font-family: $fonteUsadaEmTodoSite;
   scroll-behavior: $padrãoRolamentoDoSite;
+  overflow-x: hidden;
 }
 
 .barraLateral {
-  flex: 1;
+  top: 0;
+  left: 0;
+  width: 35vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: $corDeFundoNavLateral;
 
   .topo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15em;
+    padding: auto;
     .item {
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-
+      align-items: center;
+      padding: 0.2em;
       .imgLogo {
-        width: clamp(3em, 4vw, 5em);
-        padding-top: clamp(0.3em, 1vw, 0.4vw);
+        min-width: 3em;
+        max-width: 5em;
+        margin: 0.5em;
       }
 
       p {
         color: $corDasFontesNavLateral;
         font-weight: 700;
-        font-size: clamp(0.8em, 1em, 1.2em);
+        font-size: 1em;
         text-align: center;
       }
     }
   }
 
   .centro {
-    padding-left: 0.625rem;
+    flex: 1;
 
     ul {
       list-style: none;
-      margin: 0;
       padding: 0;
 
       .titulo {
         font-size: clamp(0.8em, 1em, 1.2em);
         font-weight: bold;
         color: $corDasFontesNavLateral;
-        margin-top: 1rem;
-        margin-bottom: 0.31rem;
+        margin: 1rem;
       }
 
       li {
         display: flex;
         align-items: center;
-        padding: 0.31rem;
+        padding: 0.5rem 1rem;
         cursor: pointer;
+        transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #292929;
+          background-color: #191919;
         }
 
         .icone {
           font-size: 1em;
-          padding: 0;
-          margin: 0;
           color: $coresDoIconesBarraLateral;
         }
 
@@ -79,4 +80,51 @@
       }
     }
   }
+  @media (min-width: 1200px) {
+    width: 12vw;
+  
+    .topo .item .imgLogo {
+      width: 4rem;
+    }
+  
+    .centro ul li {
+      padding: 0.4rem 0.8rem;
+  
+      .icone {
+        font-size: 1rem;
+      }
+  
+      span {
+        font-size: 0.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  
+  @media (min-width: 1500px) {
+    width: 10vw;
+  
+    .topo .item .imgLogo {
+      width: 4.5rem;
+    }
+  
+    .centro ul li {
+      padding: 0.3rem 0.6rem;
+  
+      .icone {
+        font-size: 1.4rem;
+      }
+  
+      span {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
 }
+
+

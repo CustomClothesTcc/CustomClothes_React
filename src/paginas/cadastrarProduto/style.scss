@@ -8,130 +8,129 @@
   font-family: $fonteUsadaEmTodoSite;
   scroll-behavior: $padrãoRolamentoDoSite;
 }
-div.lista {
-  div.topo {
-    margin-bottom: 2em;
+
+div.topo {
+  margin-bottom: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    overflow-y: hidden;
+    color: #333;
+    font-size: clamp(1.5em, 2vw, 2.5em);
+    font-weight: bold;
+    text-align: center;
+    margin: 1em;
+  }
+}
+
+div.inputFormulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2em;
+
+  img.imagemProduto {
+    width: clamp(10em, 15vw, 20em);
+    height: clamp(10em, 15vw, 20em);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2em solid #ccc;
+    margin: 0em 1em 3em 1em;
+    transition: transform 0.3s ease;
+  }
+
+  img.imagemProduto:hover {
+    transform: scale(1.05);
+  }
+
+  label.uploadLabel {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    h1 {
-      overflow-y: hidden;
-      color: #333;
-      font-size: clamp(1.5em, 2vw, 2.5em);
-      font-weight: bold;
-      text-align: center;
-      margin: 1em;
-    }
+    gap: 1em;
+    cursor: pointer;
+    color: #555;
+    font-weight: bold;
+    padding: 1em 4em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1em;
   }
 
-  div.inputFormulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2em;
+  label.uploadLabel:hover {
+    background-color: #eee;
+    color: #333;
+  }
+}
 
-    img.imagemProduto {
-      width: clamp(10em, 15vw, 20em);
-      height: clamp(10em, 15vw, 20em);
-      border-radius: 50%;
-      object-fit: cover;
-      border: 0.2em solid #ccc;
-      margin: 0em 1em 3em 1em;
-      transition: transform 0.3s ease;
-    }
+div.baixo {
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  margin-bottom: 2em;
 
-    img.imagemProduto:hover {
-      transform: scale(1.05);
-    }
+  div.direita {
+    flex: 2;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 1vw;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 
-    label.uploadLabel {
+    form {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1em;
-      cursor: pointer;
-      color: #555;
-      font-weight: bold;
-      padding: 1em 4em;
-      border: 0.1em solid #ccc;
-      border-radius: 0.5em;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-size: 1em;
-    }
+      flex-wrap: wrap;
+      gap: 2vw;
 
-    label.uploadLabel:hover {
-      background-color: #eee;
-      color: #333;
-    }
-  }
+      div.inputFormulario {
+        width: 100%;
+        margin-bottom: 1em;
 
-  div.baixo {
-    display: flex;
-    flex-direction: column;
-    gap: 2vw;
-    margin-bottom: 2em;
+        label {
+          display: block;
+          margin-bottom: 0.5em;
+          font-weight: bold;
+          color: #555;
+        }
 
-    div.direita {
-      flex: 2;
-      background-color: #fff;
-      padding: 2em;
-      border-radius: 1vw;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      width: 100%;
-
-      form {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2vw;
-
-        div.inputFormulario {
+        input,
+        select {
           width: 100%;
-          margin-bottom: 1em;
+          padding: 0.8em;
+          border: 0.1em solid #ccc;
+          border-radius: 0.5em;
+          font-size: 1em;
+          color: #333;
+          transition: border-color 0.3s ease;
+        }
 
-          label {
-            display: block;
-            margin-bottom: 0.5em;
-            font-weight: bold;
-            color: #555;
-          }
-
-          input,
-          select {
-            width: 100%;
-            padding: 0.8em;
-            border: 0.1em solid #ccc;
-            border-radius: 0.5em;
-            font-size: 1em;
-            color: #333;
-            transition: border-color 0.3s ease;
-          }
-
-          input:focus,
-          select:focus {
-            border-color: #666;
-            outline: none;
-          }
+        input:focus,
+        select:focus {
+          border-color: #666;
+          outline: none;
         }
       }
     }
   }
-  div.divContainerButton {
-    .divButton {
-      display: flex;
-      justify-content: center;
+}
+div.divContainerButton {
+  .divButton {
+    display: flex;
+    justify-content: center;
 
-      button.btnEnviar {
-        color: #f3f3f3;
-        background-color: $coresDoIconesBarraLateral;
-        width: 75%;
-        margin-bottom: 1em;
-        font-size: 1em;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 10px;
-        transition: background-color 0.3s ease;
-      }
+    button.btnEnviar {
+      color: #f3f3f3;
+      background-color: $coresDoIconesBarraLateral;
+      width: 75%;
+      margin-bottom: 1em;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
     }
   }
 }

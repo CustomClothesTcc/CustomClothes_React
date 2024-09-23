@@ -73,7 +73,6 @@ const CadastrarProduto = ({ entradas, titulo }) => {
   );
 };
 
-// Adicionando validação de props
 CadastrarProduto.propTypes = {
   entradas: PropTypes.arrayOf(
     PropTypes.shape({

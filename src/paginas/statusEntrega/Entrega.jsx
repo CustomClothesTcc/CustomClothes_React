@@ -33,9 +33,7 @@ const BarraEntrega = ({ id, dataCompra, status }) => {
 
   return (
     <div className="divBarraEntrega">
-         <BarraLateral />
       <div className="barraEntrega" onClick={() => setExpandido(!expandido)}>
-      <BarraDeNavegacao />
         <div className="infoEntrega">
           <span className="entregaId">Nº {id}</span>
           <span className="dataCompra">{dataCompra}</span>
@@ -76,7 +74,8 @@ const BarraEntrega = ({ id, dataCompra, status }) => {
 BarraEntrega.propTypes = {
   id: PropTypes.number.isRequired,
   dataCompra: PropTypes.string.isRequired,
-  status: PropTypes.oneOf(["pendente", "aprovado", "a caminho", "entregue"]).isRequired,
+  status: PropTypes.oneOf(["pendente", "aprovado", "a caminho", "entregue"])
+    .isRequired,
 };
 
 const Entrega = () => {
@@ -94,7 +93,7 @@ const Entrega = () => {
       <div className="containerNovo">
         <BarraDeNavegacao />
         <div className="topo">
-          <h1>Registro de entregas dos clientes</h1>
+          <h1>REGISTRO DE ENTREGAS</h1>
         </div>
         <div className="listaEntregas">
           {entregasPaginadas.map((entrega) => (

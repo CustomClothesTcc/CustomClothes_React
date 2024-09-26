@@ -33,7 +33,9 @@ const BarraEntrega = ({ id, dataCompra, status }) => {
 
   return (
     <div className="divBarraEntrega">
+         <BarraLateral />
       <div className="barraEntrega" onClick={() => setExpandido(!expandido)}>
+      <BarraDeNavegacao />
         <div className="infoEntrega">
           <span className="entregaId">Nº {id}</span>
           <span className="dataCompra">{dataCompra}</span>

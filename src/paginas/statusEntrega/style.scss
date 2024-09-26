@@ -1,91 +1,132 @@
 @import '../padronizacao/organizacao.scss';
 
-*{
+* {
   margin: 0;
-  scroll-behavior: $padrãoRolamentoDoSite;
   padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
   font-family: $fonteUsadaEmTodoSite;
 }
 
 .novo {
   display: flex;
+  background-color: #f8f9fa;
 
   .containerNovo {
     flex-grow: 1;
 
     .topo h1 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin-bottom: clamp(1rem, 2vw, 2rem);
+      font-size: clamp(1.75rem, 3vw, 2.5rem);
+      margin-bottom: 1.5rem;
+      color: #343a40;
+      text-align: center;
     }
 
     .listaEntregas {
-      margin-top: clamp(1rem, 2vw, 2rem);
+      margin-top: 1.5rem;
     }
 
     .divBarraEntrega {
-      margin-bottom: clamp(0.5rem, 1vw, 1rem);
-      border: 1px solid #ddd;
-      padding: clamp(0.5rem, 1vw, 1rem);
-      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      border: 1px solid #dee2e6;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
       .barraEntrega {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f1f3f5;
+        }
 
         .infoEntrega {
           display: flex;
           justify-content: space-between;
           width: 100%;
-          height: 3em;
+
+          .entregaId {
+            font-weight: bold;
+          }
 
           .dataCompra {
             margin-left: auto;
+            color: #6c757d;
           }
         }
 
-        
+        .iconeSeta {
+          font-size: 1.5rem;
+          padding: 0.3em;
+          transition: transform 0.3s ease;
+        }
       }
 
       .linhaStatus {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e9ecef;
         display: flex;
-        align-items: center;
         position: relative;
-        margin-top: clamp(1rem, 2vh, 2rem);
-        padding: clamp(0.5rem, 1vw, 1rem) 0;
-        border-top: 1px solid #ddd;
 
         .pontos {
           display: flex;
           justify-content: space-between;
           width: 100%;
-          position: relative;
 
           .pontoWrapper {
             text-align: center;
 
             .ponto {
-              width: clamp(0.5rem, 1vw, 0.75rem);
-              height: clamp(0.5rem, 1vw, 0.75rem);
+              width: 1rem;
+              height: 1rem;
               background-color: #ccc;
               border-radius: 50%;
-              margin-bottom: clamp(0.25rem, 0.5vw, 0.5rem);
+              margin-bottom: 0.5rem;
 
               &.ativo {
                 background-color: #007bff;
               }
             }
 
-          
+            .statusTexto {
+              font-size: 0.875rem;
+              color: #495057;
+            }
           }
         }
 
         .carrinho {
           position: absolute;
-          top: -2.5rem;
+          top: -2rem;
           left: 0;
-          transform: translateX(calc(var(--posicao-carrinho) * 100%));
           transition: transform 0.3s ease;
+        }
+      }
+    }
+
+    .navegacaoPaginas {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+
+      button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin: 0 0.5rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
         }
       }
     }

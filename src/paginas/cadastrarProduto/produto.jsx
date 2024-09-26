@@ -11,8 +11,8 @@ const CadastrarProduto = ({ entradas, titulo }) => {
   return (
     <div className="lista">
       <BarraLateral />
-      <div className="conainerLista">
-        <BarraDeNavegacao />
+      <div className="containerLista">
+      <BarraDeNavegacao />
         <div className="topo">
           <h1>{titulo}</h1>
         </div>

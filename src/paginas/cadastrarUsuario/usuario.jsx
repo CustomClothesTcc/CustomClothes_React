@@ -15,7 +15,7 @@ const NovoUsuario = ({ entradas, titulo }) => {
         <div className="topo">
           <h1>{titulo}</h1>
         </div>
-        <div className="inputFormulario">
+        <div className="inputFormulario imagemCentralizada">
           <img
             src={
               arquivo

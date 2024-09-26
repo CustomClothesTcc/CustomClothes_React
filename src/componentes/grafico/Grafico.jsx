@@ -1,4 +1,3 @@
-
 import "./style.scss";
 import {
   AreaChart,
@@ -8,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import PropTypes from "prop-types";
 
 const dados = [
   { nome: "Janeiro", Total: 1200 },
@@ -49,6 +49,11 @@ const Grafico = ({ aspecto, titulo }) => {
       </ResponsiveContainer>
     </div>
   );
+};
+
+Grafico.propTypes = {
+  aspecto: PropTypes.number.isRequired,
+  titulo: PropTypes.string.isRequired,
 };
 
 export default Grafico;

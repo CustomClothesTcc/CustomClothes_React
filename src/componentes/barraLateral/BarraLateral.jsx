@@ -63,15 +63,7 @@ const BarraLateral = () => {
           </li>
           </Link>
           
-          <p className="titulo">ÚTIL</p>
-          <li>
-            <InsertChartIcon className="icone" />
-            <span>Estatísticas</span>
-          </li>
-          <li>
-            <NotificationsNoneIcon className="icone" />
-            <span>Notificações</span>
-          </li>
+          
           <p className="titulo">USUÁRIO</p>
           <li>
             <AccountCircleOutlinedIcon className="icone" />

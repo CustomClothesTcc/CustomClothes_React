@@ -1,24 +1,25 @@
 import "./style.scss";
-import telaAdm from "../../assets/poderosoChefinho.png";
+import telaAdm from "../../assets/poderosoChef.jpg";
 import telaCom from "../../assets/zeCarioca.jpg";
 
 const SelecaoPerfil = () => {
   return (
-    <div className="fullContainer">
-      <div className="divAdm fullPerfil">
-        <img src={telaAdm} alt="" />
-        <p>ADMINISTRAÇÃO</p>
-      </div>
-      <div className="divAdm fullPerfil">
-        <img src={telaCom} alt="" />
-        <p>COMÉRCIO</p>
-      </div>
-      <div className="divAdicao fullPerfil">
-        <button>
-          <div className="adicao"></div>
-        </button>
-
-        <p>NOVO PERFIL</p>
+    <div className="site">
+      <div className="fullContainer">
+        <div className="perfil">
+          <img src={telaAdm} alt="Perfil Administração" />
+          <p>ADMINISTRAÇÃO</p>
+        </div>
+        <div className="perfil">
+          <img src={telaCom} alt="Perfil Comércio" />
+          <p>COMÉRCIO</p>
+        </div>
+        <div className="perfil novoPerfil">
+          <button>
+            <div className="adicao"></div>
+          </button>
+          <p>NOVO PERFIL</p>
+        </div>
       </div>
     </div>
   );

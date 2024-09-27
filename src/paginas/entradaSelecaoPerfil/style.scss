@@ -1,0 +1,40 @@
+div.fullContainer {
+  display: flex;
+  gap: 3rem;
+  img {
+    width: 20vw;
+    height: 20vw;
+  }
+  div.fullPerfil{
+    display: flex;
+    flex-direction: column;
+  }
+  div.adicao {
+    width: 15vw; // Largura do soma
+    height: 15vw; // Altura do soma
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+    }
+
+    &::before {
+      width: 100%;
+      height: 4vw; // Espessura do traço horizontal responsiva
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      width: 4vw; // Espessura do traço vertical responsiva
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

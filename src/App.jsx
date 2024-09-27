@@ -43,10 +43,7 @@ function App() {
                 }
               />
             </Route>
-            
-              
-              <Route path="entrega" element={<Entrega />} />
-            
+            <Route path="entrega" element={<Entrega />} />    
           </Route>
         </Routes>
       </BrowserRouter>

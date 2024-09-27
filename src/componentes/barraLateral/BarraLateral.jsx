@@ -4,34 +4,26 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import { Link } from "react-router-dom";
-import imagemCC from '../../assets/corel1.svg'
+import imagemCC from "../../assets/corel1.svg";
 
 const BarraLateral = () => {
   return (
     <div className="barraLateral">
-    <div className="topo">
+      <div className="topo">
         <Link to="/" style={{ textDecoration: "none" }}>
-        <div className="item">
-            <img
-              src={imagemCC}
-              alt=""
-              className="imgLogo"
-            />
-            <p>
-            CUSTOM CLOTHES
-          </p>
-        </div>
+          <div className="item">
+            <img src={imagemCC} alt="" className="imgLogo" />
+            <p>CUSTOM CLOTHES</p>
+          </div>
         </Link>
       </div>
       <div className="centro">
         <ul>
           <p className="titulo">PRINCIPAL</p>
-          <Link to="/" style={{textDecoration: "none"}}>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
               <DashboardIcon className="icone" />
               <span>Dashboard</span>
@@ -57,13 +49,12 @@ const BarraLateral = () => {
             </li>
           </Link>
           <Link to="/entrega">
-          <li>
-            <LocalShippingIcon className="icone" />
-            <span>Entrega</span>
-          </li>
+            <li>
+              <LocalShippingIcon className="icone" />
+              <span>Entrega</span>
+            </li>
           </Link>
-          
-          
+
           <p className="titulo">USUÁRIO</p>
           <li>
             <AccountCircleOutlinedIcon className="icone" />

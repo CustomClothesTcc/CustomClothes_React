@@ -1,8 +1,87 @@
-@import '../padronizacao/organizacao.scss';
-
+@import "../padronizacao/cores.scss";
+@import "../padronizacao/organizacao.scss";
 *{
   margin: 0;
   padding: 0;
-  scroll-behavior: $padrãoRolamentoDoSite;
+}
+.selecaoPerfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $corDeFundoNavLateral;
+  color: $corDasFontesNavLateral;
   font-family: $fonteUsadaEmTodoSite;
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .perfisContainer {
+    display: flex;
+    gap: 2rem;
+
+    .perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .adicionar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: $coresDoIconesBarraLateral;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+      span {
+        font-size: 3rem;
+        color: $corDaLupaDaBarraDePesquisa;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: lighten($coresDoIconesBarraLateral, 10%);
+      }
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $coresDoIconesBarraLateral;
+    color: $corDaLupaDaBarraDePesquisa;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($coresDoIconesBarraLateral, 10%);
+    }
+  }
 }

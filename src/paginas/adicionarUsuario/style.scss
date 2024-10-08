@@ -1,0 +1,116 @@
+// src/pages/CadastroPerfil.scss
+@import '../padronizacao/organizacao.scss';
+@import '../padronizacao/cores.scss';
+
+.cadastroPerfil {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2vh 5vw;
+  background-color: #f9f9f9;
+  border-radius: 1vw;
+  box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
+  font-family: $fonteUsadaEmTodoSite;
+
+  .titulo {
+    color: $corTextoTitulos;
+    text-align: center;
+    margin-bottom: 2vh;
+    font-size: clamp(1.5em, 2vw, 2.5em);
+    font-weight: bold;
+  }
+
+  .formCadastro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2vh;
+
+    label {
+      font-weight: bold;
+      color: $corTextoGeral;
+      margin-bottom: 0.5em;
+
+      input,
+      select {
+        width: 100%;
+        padding: 1em;
+        border: 0.1em solid $corTextoGeral;
+        border-radius: 0.5em;
+        font-family: $fonteUsadaEmTodoSite;
+        font-size: 1em;
+        color: $corTextoGeral;
+        transition: border-color 0.3s ease;
+      }
+
+      input:focus,
+      select:focus {
+        border-color: darken($corTextoGeral, 10%);
+        outline: none;
+      }
+    }
+
+    .uploadFoto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2vh;
+
+      input[type="file"] {
+        display: none;
+      }
+
+      label {
+        cursor: pointer;
+        background-color: #ccc;
+        color: #333;
+        font-weight: bold;
+        padding: 1em 4em;
+        border: 0.1em solid #ccc;
+        border-radius: 0.5em;
+        font-size: 1em;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          background-color: #eee;
+          color: #000;
+        }
+      }
+
+      .imagemPreview {
+        width: clamp(10em, 15vw, 20em);
+        height: clamp(10em, 15vw, 20em);
+        border-radius: 50%;
+        object-fit: cover;
+        border: 0.2em solid #ccc;
+        margin: 1em;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .divContainerButton {
+      display: flex;
+      justify-content: center;
+
+      button.btnSubmit {
+        background-color: $coresDoIconesBarraLateral;
+        color: $corDaLupaDaBarraDePesquisa;
+        padding: 1em 2em;
+        width: 75%;
+        margin-top: 2vh;
+        font-size: 1.1em;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0.5em;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: darken($coresDoIconesBarraLateral, 10%);
+        }
+      }
+    }
+  }
+}

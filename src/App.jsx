@@ -7,6 +7,7 @@ import ListaUsuarios from "./paginas/listaUsuarios/Lista";
 import Unico from "./paginas/unico/Unico";
 import NovoUsuario from "./paginas/cadastrarUsuario/usuario";
 import NovoProduto from "./paginas/cadastrarProduto/produto";
+import NovoPerfil from "./paginas/adicionarUsuario/NovoPerfil";
 import { entradasProduto, entradasUsuario } from "./formulario";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
               />
             </Route>
             <Route path="entrega" element={<Entrega />} />    
+            <Route path="novoUsuario" element={<NovoPerfil />} />    
           </Route>
         </Routes>
       </BrowserRouter>

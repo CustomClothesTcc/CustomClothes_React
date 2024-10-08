@@ -1,6 +1,7 @@
 import "./style.scss";
 import perfil1 from "../../assets/perfil1.jpg";
 import perfil2 from "../../assets/perfil2.jpg";
+// import { Link } from "react-router-dom";
 
 const SelecaoPerfil = () => {
   const perfis = [
@@ -18,9 +19,12 @@ const SelecaoPerfil = () => {
             <p>{perfil.nome}</p>
           </div>
         ))}
-        <div className="adicionar">
-          <span>+</span>
-        </div>
+        {/* <Link to="/novoUsuario" style={{ textDecoration: "none" }}> */}
+          <div className="adicionar">
+            <span>+</span>
+          </div>
+        {/* </Link> */}
+        
       </div>
       <button>SAIR DO SISTEMA</button>
     </div>

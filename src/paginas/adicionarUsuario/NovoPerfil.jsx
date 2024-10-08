@@ -1,18 +1,18 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import imagem1 from "../../assets/logoCC.jpeg";
 import "./style.scss";
 
 const CadastroPerfil = () => {
   const [formulario, setFormulario] = useState({
-    nome: '',
-    dataNascimento: '',
-    cpf: '',
-    rg: '',
-    telefone: '',
-    celular: '',
-    cargo: 'administrativo',
-    sexo: '',
-    senha: '',
+    nome: "",
+    dataNascimento: "",
+    cpf: "",
+    rg: "",
+    telefone: "",
+    celular: "",
+    cargo: "administrativo",
+    sexo: "",
+    senha: "",
     foto: null,
   });
 
@@ -27,13 +27,26 @@ const CadastroPerfil = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Cadastro realizado com sucesso!');
+    alert("Cadastro realizado com sucesso!");
   };
 
   return (
     <div className="cadastroPerfil">
+      <div className="topBar">
+        <div className="voltar">
+          <a href="/">← Voltar ao Início</a>
+        </div>
+        <div className="logoSite">
+          <img src={imagem1} alt="logo" className="avatar" />
+          <h2>Custom Clothes</h2>
+        </div>
+      </div>
       <h2 className="titulo">Cadastrar Novo Perfil</h2>
       <form onSubmit={handleSubmit} className="formCadastro">
+        <label className="foto">
+          Foto:
+          <input type="file" name="foto" onChange={handleFileChange} />
+        </label>
         <label>
           Nome:
           <input
@@ -130,11 +143,9 @@ const CadastroPerfil = () => {
             required
           />
         </label>
-        <label>
-          Foto:
-          <input type="file" name="foto" onChange={handleFileChange} />
-        </label>
-        <button type="submit" className="btnSubmit">Cadastrar</button>
+        <button type="submit" className="btnSubmit">
+          Cadastrar
+        </button>
       </form>
     </div>
   );
